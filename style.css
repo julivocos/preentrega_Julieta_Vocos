@@ -1,0 +1,539 @@
+*{
+margin:0;
+padding: 0;
+}
+
+/*dispositivos mobile xs*/
+@media only screen and (max-width:360px){
+    header{
+        grid-template-columns: 40% 60% ;
+        grid-template-rows: 65% 35% ;
+        grid-template-areas:"img frase"
+                            "letra frase";                
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 100px;
+    }
+       
+    .animate__bounceInRight{
+     font-size: 10px;
+    }
+
+    .header_dos h3{
+        font-size: 15px;
+    }
+
+    .ul_nav{
+        flex-direction: column;
+    }
+    .ul_nav a{/*formato en links del menu de nav*/
+        font-size: 10px;   
+    }
+    .titulos{ 
+        font-size: 15px;      
+    } 
+    .subtitulos{
+        font-size: 8px;
+    }
+    .container_tres{ /*imagenes en pagina principal*/ 
+        width: 80%;
+        height: 85%;
+    }
+    #button_a{
+        padding: 8px 12px;
+        font-size: 9px;
+       
+    }
+    #container_index{ /*div en pagina principal*/
+     grid-template-rows: 30px 60px 200px 40px 40px;
+    }  
+    footer{
+        height: 70px;
+        font-size: 10px;
+        }
+    
+        footer img{ 
+        width:4%;
+        }
+    #div_footer{
+        height: 30%;
+    }
+    #container_serv{ /*div en pagina principal*/
+        grid-template-rows: 30px 700px 40px; 
+        grid-template-columns: 98%;
+        }
+
+ .container_dos_serv{/*contenedor general*/
+    height: 700px;
+}  
+.padre_servicios{ /*contenedor padre*/
+    margin-bottom: 8px;
+}
+
+.hijo_servicios{/*contenedor hijo*/
+    font-size: 10px;
+    width: 32%;  
+    height: 90%;
+  
+}
+.hijo_servicios ul{
+    font-size: 8px;
+}
+.padre_servicios{ /*contenedor padre*/
+    height:40%;
+}
+.padre_servicios img{
+    height: 25%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+
+}
+
+
+ /*FORMATOS DEL HEADER:LOGO, NOMBRE Y TITULO*/
+header{
+    border:5px solid rgb(33, 94, 117) ;
+    display:grid;
+    align-items: center;
+}
+.header_tres{
+    color:rgba(190, 37, 14, 0.911);
+    font-style: italic;
+    grid-area: frase;
+    justify-self: start;         
+}
+
+.header_dos{ /*letras A&S*/
+    color:rgba(131, 28, 12, 0.911);
+    font-style: italic; 
+    grid-area: letra;   
+}
+
+.header_uno{/*imagen*/
+     grid-area: img;
+}
+.header_uno img{
+    height: 100%;
+    width: 100%;
+}
+
+/*escritorio 1200px*/
+@media only screen and (min-width:361px){
+   
+    header{ 
+        height: 180px;
+        grid-template-columns: 25% 15% 60%;
+        grid-template-rows: 100%;
+        grid-template-areas:"img letra frase";                
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        
+    }
+    .animate__bounceInRight{
+        font-size: 25px;
+    }
+    .header_dos h3{
+        font-size: 50px;
+    }
+    .ul_nav a{/*formato en links del menu de nav*/ 
+        font-size: 20px;
+    }
+    .ul_nav a:hover{
+        font-size: 160%;
+        color: rgb(5, 36, 77);
+    }
+    .titulos{ 
+        font-size: 35px;    
+    } 
+    .subtitulos{
+        font-size: 22px;
+       
+    }
+    .container_tres{ /*imagenes en pagina principal*/ 
+        width: 85%;
+        height: 93%;
+    }
+    #button_a:hover{
+     
+        color: white;
+  
+   }
+   #button_a{
+       padding: 15px 32px;
+       font-size: 22px;
+       
+   }
+   #container_index{ /*div en pagina principal*/
+    grid-template-rows: 100px 120px 600px 100px 100px; 
+    }
+    footer{
+    height: 150px;
+    font-size: 18px;
+    }
+
+    footer img{ 
+    width:2%;
+    }
+
+    footer img:hover{
+    width: 2.5%;
+    }
+    #container_serv{ /*div en pagina principal*/
+        grid-template-rows: 100px 1700px 100px; 
+        grid-template-columns: 95%;
+        }
+
+ .container_dos_serv{/*contenedor general*/
+    height: 1700px;
+}  
+.padre_servicios{ /*contenedor padre*/
+    margin-bottom: 30px;
+}
+
+.hijo_servicios{/*contenedor hijo*/
+    font-size: 22px;
+    width: 29%;  
+    height: 90%;
+  
+}
+
+.hijo_servicios ul{
+    font-size: 21px;
+}
+
+.hijo_servicios li:hover{
+    font-size: 24px;
+    color:rgb(5, 36, 77);
+}
+.padre_servicios{ /*contenedor padre*/
+    height:70%;
+}
+.padre_servicios img{
+    height: 40%;
+    width: 80%;
+    border-radius: 20px;
+}
+
+
+
+
+
+}
+
+
+
+
+/*MENU DE NAVEGACION*/
+
+.ul_nav{
+    height: 120px;  
+    list-style: none;
+    background-color:rgba(90, 206, 186, 0.973); 
+    border-radius: 30px;
+    display: flex;  
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.ul_nav a{/*formato en links del menu de nav*/
+    text-decoration: none;
+    color: rgb(23, 66, 107);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold; 
+}
+
+
+/*titulos de cada pagina*/
+.titulos{    
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}  
+
+.subtitulos{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+/*PAGINA INICIO*/ 
+  
+#container_index{ /*div en pagina principal*/
+    display: grid;
+  
+    grid-template-areas:"A1"
+                        "A2"
+                        "A3" 
+                        "A4"
+                        "A5"    ; 
+    justify-content: center;
+    align-content:center;
+    justify-items: center;
+    align-items: center;
+}
+
+.container_uno{
+    grid-area:A1 ;
+    align-self: center;
+
+}
+
+.container_dos{
+    grid-area: A2;
+    align-self: flex-end; 
+    text-align: center;  
+}
+
+
+.container_tres{ /*imagenes en pagina principal*/ 
+    grid-area: A3;
+    align-self: center;
+}
+
+.img_container{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+
+.carousel-item img{
+    width: 90%;
+    height: 100%;
+
+
+}
+
+
+.container_cuatro{
+    grid-area: A4;
+    align-self: center;
+    justify-self:center;
+    text-align: center;
+}
+
+
+.contacto{
+    grid-area: A5;
+    text-align: center;
+    align-self: center;
+    
+ }
+ 
+  
+ #button_a{
+     background-color:rgba(71, 163, 148, 0.973);
+     color: rgb(23, 66, 107);
+     text-align: center;
+     cursor: pointer;
+     font-weight: 700;
+     text-decoration: none;
+     border-radius: 5px;
+     
+ }
+
+
+/*PAGINA SERVICIOS */
+#container_serv{
+    display: grid;
+    grid-template-columns: 96%;
+    grid-template-areas:"Area1"
+                        "Area2"
+                        "Area3"; 
+    justify-content: center;
+    align-content:center;
+    justify-items: center;
+    align-items: center;
+}
+.container_uno_serv{
+    grid-area:Area1 ;
+    align-self: center;
+
+}
+
+.container_tres_serv{
+    grid-area: Area3;
+}
+
+.container_dos_serv{/*contenedor general*/
+    grid-area: Area2 ;
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+    
+.padre_servicios{ /*contenedor padre*/
+    list-style: none;
+    color: black;
+    font-weight:bold;
+    display: flex;  
+    background-color: rgb(184, 182, 182);
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+
+.hijo_servicios{/*contenedor hijo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-style: italic;
+    background-image: linear-gradient(rgb(114, 157, 158), rgb(116, 214, 177) );
+  
+}
+.hijo_servicios p{
+    text-align: center;
+}
+
+.hijo_servicios ul{
+    color: rgb(50, 44, 94);
+}
+
+
+
+/*PAGINA CONSEJOS*/
+.titulosec{
+    font-size: 30px;
+    text-align: center; 
+    color:rgb(31, 31, 77);
+    font-style: italic;
+    font-weight: 1000;
+}
+
+
+.hijo_uno{
+    color: rgb(76, 134, 156);
+    font-size: 35px;
+    width: 40%;
+    height: 50%; display: inline-block;
+    font-weight: 800;
+    margin-bottom: 35px;
+    margin-left: 100px;
+   
+
+
+}
+.hijo_uno a{
+    text-decoration: none;color: rgb(76, 134, 156);
+}
+
+.hijo_dos{
+    width: 45%;
+    height: 50%; display: inline-block;
+    position: relative;
+    margin-top: 35px;
+
+}
+
+.hijo_tres{
+    margin-left: 10%;
+
+}
+
+/*PAGINA UBICACION*/
+.grid_ubicacion{
+    display: grid;
+    grid-template-columns: 85%;
+    grid-template-rows:150px 500px 200px 150px;
+    grid-template-areas:"titulo"  
+                        "mapa"
+                        "horario"
+                        "boton";
+    justify-content: center;
+    align-items: center;
+}
+.titulo_ubicacion{
+    grid-area: titulo;
+    text-align: center;
+
+}
+.horario_ubicacion{
+    grid-area: horario;
+    border: solid rgb(51, 153, 168);
+    display: flex;
+   flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 180px;
+    
+}
+.hijos_horario{
+   
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.mapa_ubicacion{
+    grid-area: mapa;
+    
+
+}
+.boton_ubicacion{
+    grid-area: boton;
+
+}
+
+ /*PAGINA CONTACTO*/ 
+
+.form{/*formulario de contacto*/
+    text-align: center;
+    font-size: 22px;
+    color: rgb(54, 49, 49);font-weight: 900;
+    
+    padding: 40px;
+    margin: 0 auto;
+       
+}
+
+.input_formato{/*formato input en formulario de contacto*/
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    
+    
+}
+
+
+
+
+
+body{
+    background-color: white;    
+}
+
+
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;    
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    text-align: center;
+    background-color: black;
+          
+}
+
+
+
