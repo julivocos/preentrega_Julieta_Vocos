@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../images/favicon.ico">
@@ -14,8 +16,8 @@
 
     <header>
         <div class="header_uno"><img src="../images/autofondo.PNG" alt="logo"/> </div>
-        <div class="header_dos"><h2>A & S</h2></div>
-        <div class="header_tres"><h2>Mecánica integral de vehículos livianos, pesados e industriales</h2></div> 
+        <div class="header_dos"><h3>A & S</h3></div>
+        <div class="header_tres"><h5 class="animate__animated animate__bounceInRight">Mecánica integral de vehículos livianos, pesados e industriales</h5></div> 
         
     </header>
 
@@ -30,36 +32,86 @@
              </ul>
         </nav>
 
-    <main>
+    <main >
+     
+       <div class="container div_consejos">
         <h1 class="titulos">Consejos para tu auto</h1>
-
-       
             <div class="hijo_uno">
                 <ol>
-                    <li><a href="https://www.vw.com.mx/es/experiencia/tips/consejos-para-cuidar-tu-automovil.html">CUIDA EL MOTOR</a></li>
-                    <li><a href="https://www.vw.com.mx/es/experiencia/tips/consejos-para-cuidar-tu-automovil.html">FRENOS</a></li>
-                    <li><a href="https://www.vw.com.mx/es/experiencia/tips/consejos-para-cuidar-tu-automovil.html">LLANTAS</a></li>
-                    <li><a href="https://www.vw.com.mx/es/experiencia/tips/consejos-para-cuidar-tu-automovil.html">AMORTIGUADORES</a></li>
-                    <li><a href="https://www.vw.com.mx/es/experiencia/tips/consejos-para-cuidar-tu-automovil.html">LUCES Y CARROCERIA</a></li>
-                   </ol>
-             </div>
-             <div class="hijo_dos">
-               
+                    <li class="titulosec">CUIDA EL MOTOR</li>
+                    <div class="card card-body">
+                        <p class="texto_consejos">Es la parte más importante de tu automóvil y su funcionamiento adecuado depende del estado de piezas como las bujías, el filtro de aire y el lubricante. Este último es importante, ya que cada pieza debe obtener el aceite suficiente para desplazarse con facilidad y evitar roces que precipitan su desgaste. .</p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">MÁS INFO</a>
+                    </div>    
+                     <div class="collapse multi-collapse" id="multiCollapseExample1">
+                         <div class="card card-body">
+                             En el caso del aceite, debes vigilar que el nivel esté al máximo y hacer un cambio de aceite cada 15 mil kilómetros (de preferencia). Aquí puedes leer sobre cuál es el mejor aceite para tu carro, los tipos de aceite y su importancia.
+                         </div>
+                     </div>
+                        
+                    
+                    <li class="titulosec">FRENOS</li>
+                    <div class="card card-body">
+                        <p class="texto_consejos">Los frenos son fundamentales para tu seguridad, así que en el momento que notes una falla debes llevarlo al taller. Recuerda revisarlos con frecuencia, sin importar si son de disco o tambor. También debes tomar en cuenta el nivel del depósito del líquido de frenos y cambiarlo al menos una vez al año. </p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse"  href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">MÁS INFO</a>
+                    </div>    
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                         <div class="card card-body">
+                            Hay partes del sistema de frenos que pueden estar más expuestas a la fricción, como las balatas, los discos o pinzas de freno, por lo que es más probable que presenten un desgaste. Para saber si los frenos están fallando, pisa el freno y si el auto se siente inestable, vibra o se escuchan golpeteos o chillidos, corre a tu taller de Servicio más cercano.
+                        </div>
+                    </div>  
+
+                    
+                    <li class="titulosec">CUBIERTAS</li>
+                    <div class="card card-body">
+                        <p class="texto_consejos">Las cubiertas son las responsables de un buen frenado, control y aceleración del auto, por lo que también son parte importante para tu seguridad. Para revisar las llantas debes tomar en cuenta la presión y el nivel de desgaste.</p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse"  href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">MÁS INFO</a>
+                    </div>    
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                         <div class="card card-body">
+                            Otro punto importante es el dibujo del neumático. Ahí podrás encontrar un línea que indica el nivel de desgaste del dibujo de los neumáticos, por lo que es necesario cambiar tus llantas cuando las notes lisas, ya que puede ocasionar que tengas menos control del vehículo y mayor distancia de frenado, lo que puede ser peligroso a largo plazo. 
+                        </div>
+                    </div>
+
+                    <li class="titulosec">AMORTIGUADORES</li>
+                    <div class="card card-body">
+                        <p class="texto_consejos">Otro componente que ayuda a mantener la estabilidad en los automóviles son los amortiguadores. Con ellos el vehículo puede nivelar los golpes e impactos que puede sufrir al circular cotidianamente, contribuyendo a que las llantas se mantengan en el suelo y no sufran un desgaste mayor. </p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">MÁS INFO</a>
+                    </div>    
+                    <div class="collapse multi-collapse" id="multiCollapseExample4">
+                         <div class="card card-body">
+                            Considera realizar un cambio de amortiguadores a los 60 mil kilómetros, o en caso de que percibas ruidos al avanzar, pierdas el control o rebotes demasiado al pasar por topes o baches. 
+                        </div>
+                    </div>
+
+                    <li class="titulosec">LUCES Y CARROCERIA</li>
+                    <div class="card card-body">
+                        <p class="texto_consejos">Sabemos que te preocupa que tu automóvil se vea bien, pero además de cumplir una parte estética en tu auto, los faros también son importantes para una buena visibilidad mientras manejas. Aquí debes cuidar que los faros no estén fundidos u opacos, así que si notas que al manejar de noche tu iluminación se reduce debes llevarlos a revisar. </p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">MÁS INFO</a>
+                    </div>    
+                    <div class="collapse multi-collapse" id="multiCollapseExample5">
+                         <div class="card card-body">
+                           Cada que laves tu auto trata de usar los productos adecuados que cuiden la pintura de la carrocería de factores como el sol, la lluvia o las heces de los animales.
+                        </div>
+                    </div>
+               </ol>
             </div>
-               
-             
-             <div class="hijo_tres">
-                <iframe width="1038" height="454" src="https://www.youtube.com/embed/qgA0Ebgrdjw" title="CONSEJOS PARA CUIDAR TU AUTO." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             </div>
-             <div class="contacto">       
-                <a href="https://api.whatsapp.com/send/?phone=5493516313797&text&type=phone_number&app_absent=0" id="button_a">¡Pedi tu turno!</a>
-           </div>
+           
+            <div class="hijo_dos">
+                 <iframe src="https://www.youtube.com/embed/qgA0Ebgrdjw" title="CONSEJOS PARA CUIDAR TU AUTO." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="contacto">       
+                 <a href="https://api.whatsapp.com/send/?phone=5493516313797&text&type=phone_number&app_absent=0" id="button_a">¡Pedi tu turno!</a>
+            </div>
+       </div>
+           
 
     </main>   
         
     <footer>
-        <div>
-            <h4>Seguinos en</h4>
+        <div id="div_footer">
+            <p>Seguinos en</p>
         </div>
         <div class="div2_footer">
             <a href="https://www.instagram.com/asmecanicaintegral/">
@@ -68,10 +120,16 @@
             <img src="../images/whatsapp.png" alt="whatsapp"/></a>
         </div>              
         <div >
-            <h4>Hernández Ramírez Nº 329 Barrio Centro América - Córdoba</h4>
+            <p>Hernández Ramírez Nº 329 Barrio Centro América - Córdoba</p>
         </div>  
 
     </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

@@ -217,7 +217,15 @@ header{
     width: 80%;
     border-radius: 20px;
 }
-
+.grid_ubicacion{
+    grid-template-rows:100px 600px 200px 100px;
+    grid-template-areas:"titulo"  
+                        "mapa"
+                        "horario"
+                        "boton";
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -257,6 +265,7 @@ header{
 .subtitulos{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
    
 }
 /*PAGINA INICIO*/ 
@@ -406,49 +415,58 @@ header{
 
 
 /*PAGINA CONSEJOS*/
+.btn{
+    width: 110px;
+}
+.card-body{
+    color: gray;
+}
+
+.div_consejos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 1800px;
+  
+    
+}
 .titulosec{
-    font-size: 30px;
-    text-align: center; 
-    color:rgb(31, 31, 77);
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgba(9, 79, 145, 0.973);
     font-style: italic;
-    font-weight: 1000;
+   
 }
 
 
 .hijo_uno{
-    color: rgb(76, 134, 156);
-    font-size: 35px;
-    width: 40%;
-    height: 50%; display: inline-block;
-    font-weight: 800;
-    margin-bottom: 35px;
-    margin-left: 100px;
-   
-
-
+  width: 95%;
+  font-weight:bold;
+  
+  
 }
-.hijo_uno a{
-    text-decoration: none;color: rgb(76, 134, 156);
+.texto_consejos{
+    font-size: 18px;
+    color:black;
 }
+
 
 .hijo_dos{
-    width: 45%;
-    height: 50%; display: inline-block;
-    position: relative;
-    margin-top: 35px;
-
+    height: 400px;
+     width: 70%
+}
+.hijo_dos iframe{
+    width:100% ;
+    height: 100%;
 }
 
-.hijo_tres{
-    margin-left: 10%;
-
-}
 
 /*PAGINA UBICACION*/
 .grid_ubicacion{
     display: grid;
     grid-template-columns: 85%;
-    grid-template-rows:150px 500px 200px 150px;
+    grid-template-rows:100px 600px 200px 100px;
     grid-template-areas:"titulo"  
                         "mapa"
                         "horario"
@@ -463,7 +481,6 @@ header{
 }
 .horario_ubicacion{
     grid-area: horario;
-    border: solid rgb(51, 153, 168);
     display: flex;
    flex-direction: column;
     justify-content: space-evenly;
@@ -485,6 +502,8 @@ header{
 
 .mapa_ubicacion{
     grid-area: mapa;
+    width: 100%;
+    height: 100%;
     
 
 }
@@ -495,25 +514,31 @@ header{
 
  /*PAGINA CONTACTO*/ 
 
-.form{/*formulario de contacto*/
-    text-align: center;
-    font-size: 22px;
-    color: rgb(54, 49, 49);font-weight: 900;
-    
-    padding: 40px;
-    margin: 0 auto;
+.section{/*formulario de contacto*/
+   margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 80px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
        
 }
 
+
 .input_formato{/*formato input en formulario de contacto*/
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
     margin-top: 10px;
-    
-    
+    border-radius: 15px;
+   
 }
 
-
+.div_contacto{
+    margin-bottom: 50px;
+    margin-top: 50px;
+   
+    
+}
 
 
 

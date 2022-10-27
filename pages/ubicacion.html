@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../images/favicon.ico">
@@ -14,8 +16,8 @@
    
     <header>
         <div class="header_uno"><img src="../images/autofondo.PNG" alt="logo"/> </div>
-        <div class="header_dos"><h2>A & S</h2></div>
-        <div class="header_tres"><h2>Mecánica integral de vehículos livianos, pesados e industriales</h2></div> 
+        <div class="header_dos"><h3>A & S</h3></div>
+        <div class="header_tres"><h5 class="animate__animated animate__bounceInRight">Mecánica integral de vehículos livianos, pesados e industriales</h5></div> 
         
     </header>
 
@@ -32,7 +34,7 @@
     
 
     <main>
-       <div class="grid_ubicacion">
+       <div class="container grid_ubicacion">
        
             <div class="titulo_ubicacion">
                  <h1 class="titulos ">¿Donde estamos?</h1>
@@ -49,7 +51,7 @@
                 
             </div>
             <div class="mapa_ubicacion">   
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.4301980163063!2d-64.17319118454667!3d-31.374699481418116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298362c40a611%3A0xc2399e9e13637563!2sDr.%20Rafael%20Hernandez%20Ramirez%20329%2C%20X5012%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1663872718876!5m2!1ses!2sar" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.4301980163063!2d-64.17319118454667!3d-31.374699481418116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298362c40a611%3A0xc2399e9e13637563!2sDr.%20Rafael%20Hernandez%20Ramirez%20329%2C%20X5012%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1663872718876!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
          
             <div class="contacto boton_ubicacion">       
@@ -61,8 +63,8 @@
         
 
     <footer>
-        <div>
-            <h4>Seguinos en</h4>
+        <div id="div_footer">
+            <p>Seguinos en</p>
         </div>
         <div class="div2_footer">
             <a href="https://www.instagram.com/asmecanicaintegral/">
@@ -71,10 +73,16 @@
             <img src="../images/whatsapp.png" alt="whatsapp"/></a>
         </div>              
         <div >
-            <h4>Hernández Ramírez Nº 329 Barrio Centro América - Córdoba</h4>
+            <p>Hernández Ramírez Nº 329 Barrio Centro América - Córdoba</p>
         </div>  
 
     </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
