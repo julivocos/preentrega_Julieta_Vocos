@@ -1,0 +1,28 @@
+@import "variables";
+
+@mixin estilos_titulos ($tamanio_letra) {
+    color:$color_textos;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    
+    @if $tamanio_letra == "titulosm"{
+        font-size:18px ;
+        font-style: italic;
+
+    }
+    @else if $tamanio_letra == "titulolg"{
+        font-size:25px ;
+
+    }
+    @else if $tamanio_letra == "subtitulosm"{
+        font-size:11px ;
+
+    }
+    @else if $tamanio_letra == "subtitulolg"{
+        font-size:16px ;
+
+    }
+
+}

@@ -1,0 +1,779 @@
+@import "partials/variables";
+@import "partials/mixin";
+
+
+
+
+*{
+ margin:0;
+ padding: 0;
+}
+       
+*{
+    box-sizing: border-box;
+}
+
+header{
+        display: grid;
+        align-items: center;
+        text-align: center;
+        background-color: black;
+        justify-items: center;
+
+        .header_tres{
+            color:$color_textos;
+            font-style: italic;
+            grid-area: frase;
+                    
+        }
+        
+        .header_dos{ /*letras A&S*/
+            color:$color_textos;
+            font-style: italic; 
+            grid-area: letra;   
+            background-color: red;
+            border-radius: 50px;
+            h3{
+                font-weight: bold;
+            }
+        }
+        
+   
+
+        .ul_nav{/*MENU DE NAVEGACION*/
+            list-style: none;           
+            display: flex;  
+            justify-content: space-evenly; 
+            margin-bottom: 0;
+            grid-area: menu;
+            align-items: center;
+            
+           
+            a{
+                text-decoration: none;
+                color: $color_textos;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold; 
+                &:hover{
+                    background-color: $color_boton;
+                    color: black;
+                   }
+             
+            }
+        
+        
+        
+        }
+
+}   
+
+
+#button_a{/*boton pedi tu turno*/
+        background-color:$color_boton;
+        color:  $color_textos;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+        align-self: center;
+
+        &:hover{
+           color:black;
+       }
+       
+}
+
+main{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-image: linear-gradient(
+            1deg,
+            rgba(84, 86, 87, 0.486), 
+            rgba(84, 86, 87, 0.486) 
+            )
+            ,url(../images/mecanica.jpg);
+
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;    
+
+}
+
+
+
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:$color_textos;    
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    text-align: center;
+    background-color: $color_background;
+
+    .div2_footer{
+        margin-bottom: 15px;
+    }
+ 
+}
+
+
+    
+@media only screen and (max-width:600px){/*MOBILE*/
+        .titulos{    
+            @include estilos_titulos("titulosm")
+            
+        }  
+        
+        .subtitulos{
+            @include estilos_titulos("subtitulosm")
+           
+        }
+    
+        header{
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas: "letra frase"
+                                "menu menu";               
+            justify-items: center;
+            align-items: center;
+            height: 230px;
+             
+            .header_dos{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 80px;
+                height: 80px;
+                
+                h3{
+                    font-size: 25px;   
+                }
+            }      
+
+            .animate__bounceInRight{
+                font-size: 18px;
+                
+            }
+
+            nav{
+                background-color: rgb(27, 26, 26);
+                width: 100%;
+                grid-area: menu;
+                
+                .ul_nav{
+                    flex-direction: column;
+                    padding-left: 0px;
+            
+                    a{
+                        font-size: 12px;   
+                      
+                    }
+                }
+        
+            }
+        
+
+
+
+
+
+        }  
+           
+        #button_a{
+            padding: 12px 15px;
+            font-size: 15px;
+           
+        }
+
+    
+    
+        
+        #container_serv{ /*servicios*/
+           
+
+            .container_dos_serv{/*contenedor general*/
+                align-items: center;
+                flex-direction:column ;
+                justify-content: space-evenly;
+
+                .hijo_servicios{/*contenedor hijo*/
+                    display: grid;
+                    grid-template-rows: 1fr 4fr; 
+                    grid-template-columns: 50% 50%;
+                    grid-template-areas: "titulo info"
+                                     "img info";
+                    font-size: 12px;
+                    margin-bottom: 8px;
+                    align-items: center;
+                    justify-items: center;
+                    font-weight:bold;
+                    border-radius: 10px;
+            
+                    p{
+                         grid-area: titulo;
+                         @include estilos_titulos("subtitulosm");
+                         color:black;
+                         margin-bottom: 0px;
+                 
+                    }
+        
+                    ul{
+                        grid-area: info;
+                        font-size: 13px;
+                        li:hover{
+                            color: white;
+                         }
+                    }
+        
+                    img{
+                        grid-area: img;
+                        height: 85%;
+                        width:90%;
+                        border-radius: 10px;
+                        opacity: 0.8;
+                        &:hover{
+                             opacity:1;
+                        }
+                    }
+              
+                }
+
+            }
+
+        }
+     
+        .div_consejos{/*consejos*/
+
+            h1{
+                margin-top: 5%;
+            }
+            .hijo_dos{
+                margin-bottom: 5%;
+            }
+            .hijo_tres_cons{
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+            .hijo_uno{
+                ol{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+            .btn{
+                width: 110px;
+               font-size: 11px;
+           }
+       
+           .titulosec{
+                font-size: 14px;
+             
+            }
+   
+           .texto_consejos{
+                font-size: 11px;
+                color:black;
+           }
+           
+           .card{
+             padding: 5px 5px 5px 5px;
+                   
+            }
+           .card-body{
+               font-size: 13px;
+           }    
+
+
+        }
+
+        .grid_ubicacion{/*ubicacion*/
+            grid-template-rows:80px 350px 150px 80px;
+
+            .hijos_horario{
+                font-size: 14px;
+                line-height: 20px;
+               letter-spacing: 1px;
+            }
+
+        }
+    
+        .div_contacto{ /*contacto*/ 
+            height: 710px;
+            
+            .section{/*formulario de contacto*/
+                font-size: 15px;
+                margin-bottom: 15px;    
+
+                .input_formato{/*formato input en formulario de contacto*/
+                    font-size: 15px;
+                     padding: 8px;
+                    width: 380px;
+                    margin-bottom: 10px;
+                }
+
+                .btn{
+                    font-size: 13px;
+                
+               
+                }
+
+            }
+
+        }
+
+        footer{
+            height: 110px;
+            font-size: 10px;
+            img{ 
+                width:4%;
+                }
+    
+        }
+    
+}
+    
+    
+    
+@media only screen and (min-width:601px){/*DESKTOP*/
+       
+        .titulos{    
+            @include estilos_titulos("titulolg")
+            
+        }  
+        
+        .subtitulos{
+            @include estilos_titulos("subtitulolg")
+           
+        }
+    
+        header{ 
+            height: 180px;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 75% 25%;
+            grid-template-areas: "letra frase"
+                                "menu menu";  
+
+           
+        
+            .header_dos{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100px;
+                height: 100px;
+                
+            }                       
+          
+            h3{
+               
+                font-size: 30px;
+                &:hover{
+                    font-size: 33px;
+                }
+            }
+            
+            .animate__bounceInRight{
+                font-size: 22px;
+                &:hover{
+                    font-size: 24px;
+                }
+            }
+
+
+            nav{
+                grid-area: menu;
+                width: 100%;
+                
+            }
+            .ul_nav a{
+                font-size: 13px;
+        
+                &:hover{
+                    font-size: 15px;
+                 
+                }
+            }
+
+        }
+    
+      
+      
+       #button_a{
+           padding: 15px 32px;
+           font-size: 18px;
+    
+           &:hover{
+         
+            color: black;
+            }
+       }
+    
+     
+    
+        footer{
+            height: 130px;
+            font-size: 15px;
+    
+            img{ 
+            width:3%;
+    
+            &:hover{
+                width: 4%;
+            }
+            }
+    
+        }
+    
+        #container_serv{ /*servicios*/
+            
+
+            .container_dos_serv{
+                
+                height: calc(150vw);
+
+                .padre_servicios{
+                    color: black;
+                    font-weight:bold;
+                    display: flex; 
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: 5%;
+
+                    .hijo_servicios{
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        font-size: 18px;
+                        width: 32%; 
+                        img{
+                            height: 32%;
+                            width: 88%;
+                            border-radius: 20px;
+                        } 
+                       
+                        flex-direction: column;
+                        ul{
+                            font-size: 14px;
+                        }
+                        li:hover{
+                            font-size: 16px;
+                            color:rgb(5, 36, 77);
+                        }
+                        p{
+                            margin-bottom: 0px;
+                        }
+                    
+                    }
+                }
+
+            }  
+
+        }
+    
+        .div_consejos{/*consejos*/
+            height: 1900px;
+    
+             .texto_consejos{
+                 font-size: 14px;
+                color:black;
+            }
+
+            .card{
+                width: calc(75vw);
+                padding: 16px 16px 16px 16px;
+            }
+    
+            .card-body{
+                font-size: 16px;
+            }    
+
+            .titulosec{
+                font-size: 19px;
+            }
+
+            .btn{
+                width: 110px;
+            }
+
+        }
+ 
+        .grid_ubicacion{/*ubicacion*/
+            grid-template-rows:100px 500px 250px 100px;
+
+            .hijos_horario{
+                font-size: 20px;
+                line-height: 40px;
+                letter-spacing: 3px;
+            }
+        }
+        
+        .div_contacto{/*contacto*/
+            height: 900px;
+            margin-bottom: 20px;
+
+            .section{/*formulario de contacto*/
+            margin-top: 20px;
+            font-size: 20px;
+            margin-bottom: 30px;
+           
+            .input_formato{/*formato input en formulario de contacto*/
+                font-size: 18px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            }
+
+        }
+        
+    
+}
+    
+   
+
+#container_index{   /*PAGINA INICIO*/ 
+        display: flex;
+        flex-direction: column  ; 
+        justify-content: center;
+        align-content:center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+
+        .container_uno{
+            margin-top: 5%;
+
+        }
+        .container_dos{
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+        }
+
+            
+        .container_tres{ /*imagenes en pagina principal*/
+            width: 60%;
+            height: 60%;
+           
+
+            .img_container{
+                width: 100%;
+                height: 100%;
+
+                .carousel-item{
+                    width: 100%;
+                    height: 100%;
+                   
+                    img{
+                        width: 100%;
+                     height: 100%; 
+                    
+                    
+                    }
+                }
+                
+            }
+                 
+
+        }
+        .container_cuatro{
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .contacto{
+            margin-bottom: 5%;
+           
+         }
+ 
+}
+    
+#container_serv{/*PAGINA SERVICIOS */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content:center;
+        justify-items: center;
+        align-items: center;
+       
+
+        .container_uno_serv{
+            text-align: center;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+        
+        .container_tres_serv{
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+      
+        .container_dos_serv{/*contenedor general*/
+           display: flex;
+           flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .hijo_servicios{/*contenedor hijo*/
+                font-style: italic;
+                border-radius: 10px;
+                background-image: linear-gradient(rgb(114, 157, 158), rgb(116, 214, 177) );
+                p{
+                    text-align: center;
+                }
+                ul{
+                    color:$color_azul;
+                    
+                }
+            
+            }
+        }      
+
+
+
+} 
+    
+.div_consejos{/*PAGINA CONSEJOS*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-weight:bold;
+        
+        .card{
+            background-color: rgba(250, 245, 245, 0.959);
+            margin-bottom: 20px;
+       
+          }
+
+        .card-body{
+            background-image: linear-gradient(
+                0deg,
+                rgba(170, 165, 165, 0.897), 
+                rgba(200, 233, 248, 0.486) 
+             )
+             ,url(../images/bujia.jpg);
+             background-repeat:repeat;
+             background-size: cover;
+             background-position: center ;
+            color:$color_azul;
+            padding: 20px 20px 20px 20px;
+           
+        }
+
+        .titulosec{
+            color:black;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        
+
+        .hijo_dos{
+            width: 88%;
+            height: 15%;
+            text-align: center;  
+            background-color:black;
+            border-radius: 10px;
+            color: $color_textos;
+        }
+
+        .hijo_dos iframe{
+            width: 100%;
+            height: 80%;
+            border-radius: 10px;
+        }
+        
+}
+   
+.grid_ubicacion{ /*PAGINA UBICACION*/
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:"titulo"  
+                            "mapa"
+                            "horario"
+                            "boton";
+        justify-content: center;
+        align-items: center;
+
+        .titulo_ubicacion{
+            grid-area: titulo;
+            text-align: center;
+        
+        }
+
+        .horario_ubicacion{
+            grid-area: horario;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        
+            .hijos_horario{   
+                display: flex;
+                font-weight: bold;
+                font-style: italic;
+                color: $color_textos;
+            }
+            
+        }
+
+        .mapa_ubicacion{
+            grid-area: mapa;
+            width: 100%;
+            height: 100%;
+           
+            
+        
+        }
+
+        .boton_ubicacion{
+            grid-area: boton;
+            justify-self: center;
+        
+        }
+
+}
+    
+.div_contacto{/*PAGINA CONTACTO*/ 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .section{/*formulario de contacto*/
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+
+            
+
+            .input_formato{/*formato input en formulario de contacto*/
+                border-radius: 15px;
+               
+            }
+
+            label{
+                color: $color_textos;
+            }
+               
+        }
+        
+}
+    
+    
+    
+
+   
+    
+    
