@@ -1,564 +1,570 @@
-*{
-margin:0;
-padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/*dispositivos mobile xs*/
-@media only screen and (max-width:360px){
-    header{
-        grid-template-columns: 40% 60% ;
-        grid-template-rows: 65% 35% ;
-        grid-template-areas:"img frase"
-                            "letra frase";                
-        justify-items: center;
-        align-items: center;
-        margin-bottom: 10px;
-        height: 100px;
-    }
-       
-    .animate__bounceInRight{
-     font-size: 10px;
-    }
-
-    .header_dos h3{
-        font-size: 15px;
-    }
-
-    .ul_nav{
-        flex-direction: column;
-    }
-    .ul_nav a{/*formato en links del menu de nav*/
-        font-size: 10px;   
-    }
-    .titulos{ 
-        font-size: 15px;      
-    } 
-    .subtitulos{
-        font-size: 8px;
-    }
-    .container_tres{ /*imagenes en pagina principal*/ 
-        width: 80%;
-        height: 85%;
-    }
-    #button_a{
-        padding: 8px 12px;
-        font-size: 9px;
-       
-    }
-    #container_index{ /*div en pagina principal*/
-     grid-template-rows: 30px 60px 200px 40px 40px;
-    }  
-    footer{
-        height: 70px;
-        font-size: 10px;
-        }
-    
-        footer img{ 
-        width:4%;
-        }
-    #div_footer{
-        height: 30%;
-    }
-    #container_serv{ /*div en pagina principal*/
-        grid-template-rows: 30px 700px 40px; 
-        grid-template-columns: 98%;
-        }
-
- .container_dos_serv{/*contenedor general*/
-    height: 700px;
-}  
-.padre_servicios{ /*contenedor padre*/
-    margin-bottom: 8px;
+* {
+  box-sizing: border-box;
 }
 
-.hijo_servicios{/*contenedor hijo*/
-    font-size: 10px;
-    width: 32%;  
-    height: 90%;
-  
+header {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  justify-items: center;
 }
-.hijo_servicios ul{
-    font-size: 8px;
+header .header_tres {
+  color: white;
+  font-style: italic;
+  grid-area: frase;
 }
-.padre_servicios{ /*contenedor padre*/
-    height:40%;
+header .header_dos { /*letras A&S*/
+  color: white;
+  font-style: italic;
+  grid-area: letra;
+  background-color: red;
+  border-radius: 50px;
 }
-.padre_servicios img{
-    height: 25%;
-    width: 80%;
-    border-radius: 10px;
+header .header_dos h3 {
+  font-weight: bold;
 }
-
-
-
+header .ul_nav { /*MENU DE NAVEGACION*/
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+  grid-area: menu;
+  align-items: center;
 }
-
-
- /*FORMATOS DEL HEADER:LOGO, NOMBRE Y TITULO*/
-header{
-    border:5px solid rgb(33, 94, 117) ;
-    display:grid;
-    align-items: center;
+header .ul_nav a {
+  text-decoration: none;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
-.header_tres{
-    color:rgba(190, 37, 14, 0.911);
-    font-style: italic;
-    grid-area: frase;
-    justify-self: start;         
-}
-
-.header_dos{ /*letras A&S*/
-    color:rgba(131, 28, 12, 0.911);
-    font-style: italic; 
-    grid-area: letra;   
-}
-
-.header_uno{/*imagen*/
-     grid-area: img;
-}
-.header_uno img{
-    height: 100%;
-    width: 100%;
+header .ul_nav a:hover {
+  background-color: rgba(38, 170, 38, 0.986);
+  color: black;
 }
 
-/*escritorio 1200px*/
-@media only screen and (min-width:361px){
-   
-    header{ 
-        height: 180px;
-        grid-template-columns: 25% 15% 60%;
-        grid-template-rows: 100%;
-        grid-template-areas:"img letra frase";                
-        justify-content: space-evenly;
-        margin-bottom: 20px;
-        
-    }
-    .animate__bounceInRight{
-        font-size: 25px;
-    }
-    .header_dos h3{
-        font-size: 50px;
-    }
-    .ul_nav a{/*formato en links del menu de nav*/ 
-        font-size: 20px;
-    }
-    .ul_nav a:hover{
-        font-size: 160%;
-        color: rgb(5, 36, 77);
-    }
-    .titulos{ 
-        font-size: 35px;    
-    } 
-    .subtitulos{
-        font-size: 22px;
-       
-    }
-    .container_tres{ /*imagenes en pagina principal*/ 
-        width: 85%;
-        height: 93%;
-    }
-    #button_a:hover{
-     
-        color: white;
-  
-   }
-   #button_a{
-       padding: 15px 32px;
-       font-size: 22px;
-       
-   }
-   #container_index{ /*div en pagina principal*/
-    grid-template-rows: 100px 120px 600px 100px 100px; 
-    }
-    footer{
-    height: 150px;
-    font-size: 18px;
-    }
-
-    footer img{ 
-    width:2%;
-    }
-
-    footer img:hover{
-    width: 2.5%;
-    }
-    #container_serv{ /*div en pagina principal*/
-        grid-template-rows: 100px 1700px 100px; 
-        grid-template-columns: 95%;
-        }
-
- .container_dos_serv{/*contenedor general*/
-    height: 1700px;
-}  
-.padre_servicios{ /*contenedor padre*/
-    margin-bottom: 30px;
+#button_a { /*boton pedi tu turno*/
+  background-color: rgba(38, 170, 38, 0.986);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  align-self: center;
+}
+#button_a:hover {
+  color: black;
 }
 
-.hijo_servicios{/*contenedor hijo*/
-    font-size: 22px;
-    width: 29%;  
-    height: 90%;
-  
+main {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: linear-gradient(1deg, rgba(84, 86, 87, 0.486), rgba(84, 86, 87, 0.486)), url(../images/mecanica.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.hijo_servicios ul{
-    font-size: 21px;
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-style: italic;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+}
+footer .div2_footer {
+  margin-bottom: 15px;
 }
 
-.hijo_servicios li:hover{
-    font-size: 24px;
-    color:rgb(5, 36, 77);
-}
-.padre_servicios{ /*contenedor padre*/
-    height:70%;
-}
-.padre_servicios img{
-    height: 40%;
-    width: 80%;
-    border-radius: 20px;
-}
-.grid_ubicacion{
-    grid-template-rows:100px 600px 200px 100px;
-    grid-template-areas:"titulo"  
-                        "mapa"
-                        "horario"
-                        "boton";
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-}
-
-
-
-
-/*MENU DE NAVEGACION*/
-
-.ul_nav{
-    height: 120px;  
-    list-style: none;
-    background-color:rgba(90, 206, 186, 0.973); 
-    border-radius: 30px;
-    display: flex;  
-    justify-content: space-evenly; 
-    align-items: center;
-}
-
-.ul_nav a{/*formato en links del menu de nav*/
-    text-decoration: none;
-    color: rgb(23, 66, 107);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold; 
-}
-
-
-/*titulos de cada pagina*/
-.titulos{    
-    text-align: center;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-}  
-
-.subtitulos{
-    color: black;
+@media only screen and (max-width: 600px) { /*MOBILE*/
+  .titulos {
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-   
-}
-/*PAGINA INICIO*/ 
-  
-#container_index{ /*div en pagina principal*/
-    display: grid;
-  
-    grid-template-areas:"A1"
-                        "A2"
-                        "A3" 
-                        "A4"
-                        "A5"    ; 
-    justify-content: center;
-    align-content:center;
-    justify-items: center;
-    align-items: center;
-}
-
-.container_uno{
-    grid-area:A1 ;
-    align-self: center;
-
-}
-
-.container_dos{
-    grid-area: A2;
-    align-self: flex-end; 
-    text-align: center;  
-}
-
-
-.container_tres{ /*imagenes en pagina principal*/ 
-    grid-area: A3;
-    align-self: center;
-}
-
-.img_container{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.carousel-item{
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-}
-
-
-.carousel-item img{
-    width: 90%;
-    height: 100%;
-
-
-}
-
-
-.container_cuatro{
-    grid-area: A4;
-    align-self: center;
-    justify-self:center;
-    text-align: center;
-}
-
-
-.contacto{
-    grid-area: A5;
-    text-align: center;
-    align-self: center;
-    
- }
- 
-  
- #button_a{
-     background-color:rgba(71, 163, 148, 0.973);
-     color: rgb(23, 66, 107);
-     text-align: center;
-     cursor: pointer;
-     font-weight: 700;
-     text-decoration: none;
-     border-radius: 5px;
-     
- }
-
-
-/*PAGINA SERVICIOS */
-#container_serv{
-    display: grid;
-    grid-template-columns: 96%;
-    grid-template-areas:"Area1"
-                        "Area2"
-                        "Area3"; 
-    justify-content: center;
-    align-content:center;
-    justify-items: center;
-    align-items: center;
-}
-.container_uno_serv{
-    grid-area:Area1 ;
-    align-self: center;
-
-}
-
-.container_tres_serv{
-    grid-area: Area3;
-}
-
-.container_dos_serv{/*contenedor general*/
-    grid-area: Area2 ;
-    display: flex;    
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-    
-.padre_servicios{ /*contenedor padre*/
-    list-style: none;
-    color: black;
-    font-weight:bold;
-    display: flex;  
-    background-color: rgb(184, 182, 182);
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-}
-
-
-.hijo_servicios{/*contenedor hijo*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-style: italic;
-    background-image: linear-gradient(rgb(114, 157, 158), rgb(116, 214, 177) );
-  
-}
-.hijo_servicios p{
-    text-align: center;
-}
-
-.hijo_servicios ul{
-    color: rgb(50, 44, 94);
-}
-
-
-
-/*PAGINA CONSEJOS*/
-.btn{
-    width: 110px;
-}
-.card-body{
-    color: gray;
-}
-
-.div_consejos{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 1800px;
-  
-    
-}
-.titulosec{
-    font-size: 22px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:rgba(9, 79, 145, 0.973);
-    font-style: italic;
-   
-}
-
-
-.hijo_uno{
-  width: 95%;
-  font-weight:bold;
-  
-  
-}
-.texto_consejos{
-    font-size: 18px;
-    color:black;
-}
-
-
-.hijo_dos{
-    height: 400px;
-     width: 70%
-}
-.hijo_dos iframe{
-    width:100% ;
-    height: 100%;
-}
-
-
-/*PAGINA UBICACION*/
-.grid_ubicacion{
-    display: grid;
-    grid-template-columns: 85%;
-    grid-template-rows:100px 600px 200px 100px;
-    grid-template-areas:"titulo"  
-                        "mapa"
-                        "horario"
-                        "boton";
-    justify-content: center;
-    align-items: center;
-}
-.titulo_ubicacion{
-    grid-area: titulo;
-    text-align: center;
-
-}
-.horario_ubicacion{
-    grid-area: horario;
-    display: flex;
-   flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 180px;
-    
-}
-.hijos_horario{
-   
-    text-align: center;
-    display: flex;
-    font-size: 20px;
-    font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 40px;
     font-weight: bold;
-    letter-spacing: 3px;
+    font-style: italic;
+    font-size: 18px;
+    font-style: italic;
+  }
+  .subtitulos {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 11px;
+  }
+  header {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "letra frase" "menu menu";
+    justify-items: center;
+    align-items: center;
+    height: 230px;
+  }
+  header .header_dos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+  }
+  header .header_dos h3 {
+    font-size: 25px;
+  }
+  header .animate__bounceInRight {
+    font-size: 18px;
+  }
+  header nav {
+    background-color: rgb(27, 26, 26);
+    width: 100%;
+    grid-area: menu;
+  }
+  header nav .ul_nav {
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  header nav .ul_nav a {
+    font-size: 12px;
+  }
+  #button_a {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  #container_serv { /*servicios*/ }
+  #container_serv .container_dos_serv { /*contenedor general*/
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #container_serv .container_dos_serv .hijo_servicios { /*contenedor hijo*/
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "titulo info" "img info";
+    font-size: 12px;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  #container_serv .container_dos_serv .hijo_servicios p {
+    grid-area: titulo;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 11px;
+    color: black;
+    margin-bottom: 0px;
+  }
+  #container_serv .container_dos_serv .hijo_servicios ul {
+    grid-area: info;
+    font-size: 13px;
+  }
+  #container_serv .container_dos_serv .hijo_servicios ul li:hover {
+    color: white;
+  }
+  #container_serv .container_dos_serv .hijo_servicios img {
+    grid-area: img;
+    height: 85%;
+    width: 90%;
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+  #container_serv .container_dos_serv .hijo_servicios img:hover {
+    opacity: 1;
+  }
+  .div_consejos { /*consejos*/ }
+  .div_consejos h1 {
+    margin-top: 5%;
+  }
+  .div_consejos .hijo_dos {
+    margin-bottom: 5%;
+  }
+  .div_consejos .hijo_tres_cons {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .div_consejos .hijo_uno ol {
+    display: flex;
+    flex-direction: column;
+  }
+  .div_consejos .btn {
+    width: 110px;
+    font-size: 11px;
+  }
+  .div_consejos .titulosec {
+    font-size: 14px;
+  }
+  .div_consejos .texto_consejos {
+    font-size: 11px;
+    color: black;
+  }
+  .div_consejos .card {
+    padding: 5px 5px 5px 5px;
+  }
+  .div_consejos .card-body {
+    font-size: 13px;
+  }
+  .grid_ubicacion { /*ubicacion*/
+    grid-template-rows: 80px 350px 150px 80px;
+  }
+  .grid_ubicacion .hijos_horario {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+  .div_contacto { /*contacto*/
+    height: 710px;
+  }
+  .div_contacto .section { /*formulario de contacto*/
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .div_contacto .section .input_formato { /*formato input en formulario de contacto*/
+    font-size: 15px;
+    padding: 8px;
+    width: 380px;
+    margin-bottom: 10px;
+  }
+  .div_contacto .section .btn {
+    font-size: 13px;
+  }
+  footer {
+    height: 110px;
+    font-size: 10px;
+  }
+  footer img {
+    width: 4%;
+  }
 }
-
-.mapa_ubicacion{
-    grid-area: mapa;
+@media only screen and (min-width: 601px) { /*DESKTOP*/
+  .titulos {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+  }
+  .subtitulos {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+  }
+  header {
+    height: 180px;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 75% 25%;
+    grid-template-areas: "letra frase" "menu menu";
+  }
+  header .header_dos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+  }
+  header h3 {
+    font-size: 30px;
+  }
+  header h3:hover {
+    font-size: 33px;
+  }
+  header .animate__bounceInRight {
+    font-size: 22px;
+  }
+  header .animate__bounceInRight:hover {
+    font-size: 24px;
+  }
+  header nav {
+    grid-area: menu;
+    width: 100%;
+  }
+  header .ul_nav a {
+    font-size: 13px;
+  }
+  header .ul_nav a:hover {
+    font-size: 15px;
+  }
+  #button_a {
+    padding: 15px 32px;
+    font-size: 18px;
+  }
+  #button_a:hover {
+    color: black;
+  }
+  footer {
+    height: 130px;
+    font-size: 15px;
+  }
+  footer img {
+    width: 3%;
+  }
+  footer img:hover {
+    width: 4%;
+  }
+  #container_serv { /*servicios*/ }
+  #container_serv .container_dos_serv {
+    height: 150vw;
+  }
+  #container_serv .container_dos_serv .padre_servicios {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
     height: 100%;
-    
-
-}
-.boton_ubicacion{
-    grid-area: boton;
-
-}
-
- /*PAGINA CONTACTO*/ 
-
-.section{/*formulario de contacto*/
-   margin-top: 30px;
-    font-size: 20px;
-    margin-bottom: 80px;
-    font-weight: 500;
+    margin-bottom: 5%;
+  }
+  #container_serv .container_dos_serv .padre_servicios .hijo_servicios {
+    height: 100%;
     display: flex;
-    justify-content: center;
-       
-}
-
-
-.input_formato{/*formato input en formulario de contacto*/
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    width: 32%;
+    flex-direction: column;
+  }
+  #container_serv .container_dos_serv .padre_servicios .hijo_servicios img {
+    height: 32%;
+    width: 88%;
+    border-radius: 20px;
+  }
+  #container_serv .container_dos_serv .padre_servicios .hijo_servicios ul {
+    font-size: 14px;
+  }
+  #container_serv .container_dos_serv .padre_servicios .hijo_servicios li:hover {
+    font-size: 16px;
+    color: rgb(5, 36, 77);
+  }
+  #container_serv .container_dos_serv .padre_servicios .hijo_servicios p {
+    margin-bottom: 0px;
+  }
+  .div_consejos { /*consejos*/
+    height: 1900px;
+  }
+  .div_consejos .texto_consejos {
+    font-size: 14px;
+    color: black;
+  }
+  .div_consejos .card {
+    width: 75vw;
+    padding: 16px 16px 16px 16px;
+  }
+  .div_consejos .card-body {
+    font-size: 16px;
+  }
+  .div_consejos .titulosec {
+    font-size: 19px;
+  }
+  .div_consejos .btn {
+    width: 110px;
+  }
+  .grid_ubicacion { /*ubicacion*/
+    grid-template-rows: 100px 500px 250px 100px;
+  }
+  .grid_ubicacion .hijos_horario {
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+  .div_contacto { /*contacto*/
+    height: 900px;
+    margin-bottom: 20px;
+  }
+  .div_contacto .section { /*formulario de contacto*/
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .div_contacto .section .input_formato { /*formato input en formulario de contacto*/
     font-size: 18px;
     padding: 10px;
-    margin-top: 10px;
-    border-radius: 15px;
-   
+    margin-bottom: 10px;
+  }
+}
+#container_index { /*PAGINA INICIO*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+#container_index .container_uno {
+  margin-top: 5%;
+}
+#container_index .container_dos {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#container_index .container_tres { /*imagenes en pagina principal*/
+  width: 60%;
+  height: 60%;
+}
+#container_index .container_tres .img_container {
+  width: 100%;
+  height: 100%;
+}
+#container_index .container_tres .img_container .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+#container_index .container_tres .img_container .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+#container_index .container_cuatro {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#container_index .contacto {
+  margin-bottom: 5%;
 }
 
-.div_contacto{
-    margin-bottom: 50px;
-    margin-top: 50px;
-   
-    
+#container_serv { /*PAGINA SERVICIOS */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+#container_serv .container_uno_serv {
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+#container_serv .container_tres_serv {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#container_serv .container_dos_serv { /*contenedor general*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#container_serv .container_dos_serv .hijo_servicios { /*contenedor hijo*/
+  font-style: italic;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(114, 157, 158), rgb(116, 214, 177));
+}
+#container_serv .container_dos_serv .hijo_servicios p {
+  text-align: center;
+}
+#container_serv .container_dos_serv .hijo_servicios ul {
+  color: rgb(4, 46, 100);
 }
 
-
-
-body{
-    background-color: white;    
+.div_consejos { /*PAGINA CONSEJOS*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-weight: bold;
+}
+.div_consejos .card {
+  background-color: rgba(250, 245, 245, 0.959);
+  margin-bottom: 20px;
+}
+.div_consejos .card-body {
+  background-image: linear-gradient(0deg, rgba(170, 165, 165, 0.897), rgba(200, 233, 248, 0.486)), url(../images/bujia.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgb(4, 46, 100);
+  padding: 20px 20px 20px 20px;
+}
+.div_consejos .titulosec {
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+.div_consejos .hijo_dos {
+  width: 88%;
+  height: 15%;
+  text-align: center;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+.div_consejos .hijo_dos iframe {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
 }
 
-
-footer{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;    
-    font-style: italic;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly ;
-    text-align: center;
-    background-color: black;
-          
+.grid_ubicacion { /*PAGINA UBICACION*/
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "titulo" "mapa" "horario" "boton";
+  justify-content: center;
+  align-items: center;
+}
+.grid_ubicacion .titulo_ubicacion {
+  grid-area: titulo;
+  text-align: center;
+}
+.grid_ubicacion .horario_ubicacion {
+  grid-area: horario;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.grid_ubicacion .horario_ubicacion .hijos_horario {
+  display: flex;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+}
+.grid_ubicacion .mapa_ubicacion {
+  grid-area: mapa;
+  width: 100%;
+  height: 100%;
+}
+.grid_ubicacion .boton_ubicacion {
+  grid-area: boton;
+  justify-self: center;
 }
 
-
-
+.div_contacto { /*PAGINA CONTACTO*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.div_contacto .section { /*formulario de contacto*/
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.div_contacto .section .input_formato { /*formato input en formulario de contacto*/
+  border-radius: 15px;
+}
+.div_contacto .section label {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
